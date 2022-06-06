@@ -1,0 +1,171 @@
+---> CAPITULO 8 <---
+>> INFERENCIA NO PARAMÉTRICA CON PROPORCIONES <<
+
++ Pruebas chi-cuadrado de pearson
+Sirve para inferir con proporciones cuando disponemos de dos varibales categoricas y una de ellas es dicotomica.
+Condiciones: 
+	1.- Las observaciones deben ser independientes entre si.
+	2.- Deben haber a lo menos 5 observaciones esperadas en cada grupo.
+	- Prueba chi-cuadrado de homogeneidad
+	Esta prueba resulta adecuada si queremos determinar si dos poblaciones(la variable dicotomica) presentan
+	las mismas proporciones en los diferentes niveles de una variable categorica.
+	- Prueba chi-cuadrado de bondad de ajuste
+	Esta prueba permite comprobar si una distribucion de frecuencias observada se asemeja a una distribucion
+	esperada. Usualmente se emplea para comprobar si una muestra es representativa de la poblacion.	
+	- Prueba chi-cuadrado de independencia
+	Esta prueba permite determinar si dos variables categoricas, de una misma poblacion, son estadisticamente
+	independientes o si, por el contrario, estan relacionadas.
+
++ PRUEBAS PARA MUESTRAS PEQUEÑAS
+	- Prueba exacta de Fisher
+	Es una alternatica a la prueba chi-cuadrado de independencia en el caso de que ambas variables sean
+	dicotomicas.
+	H0: las variables son independientes
+	HA: las variables estan relacionadas
+	- Prueba de mcNemar
+	Esta prueba resulta apropiada cuando una misma caracteristica, con respuesta dicotomica, se mide en dos
+	ocaciones diferentes para los mismo sujetos (muestras pareadas) y queremos determinar si se produce o no un
+	cambio significativo entre ambas mediciones.
+	H0: no hay cambios significativos en las respuestas
+	HA: si hay cambios significativos en las respuestas
+
++ PRUEBA Q DE COCHRAN
+Es una extension de la prueba de mcNemar, adecuada cuando la variable de respuesta es dicotomica y la variable
+independiente tiene mas de dos observaciones pareadas.
+H0: la proporción de “éxitos” es la misma para todos los grupos
+HA: la proporción de “éxitos” es distinta para al menos un grupo
+Condiciones:
+1.- La variable de respuesta es dicotomica.
+2.- La variable independiente es categorica.
+3.- Las observaciones son independientes entre si.
+4.- El tamano de la muestra es suficientemente grande (n * k >= 24).
+	- Analisis post-hoc
+		- Corrección de Bonferroni
+		- Corrección de Holm
+
+---> CAPITULO 9 <---
+>> ANOVA DE UNA VÍA PARA MUESTRAS INDEPENDIENTES <<
+
++ Condiciones para usar ANOVA de una via para muestras independientes
+	1.- La escala con que se mide la variable dependiente tiene las propiedades de una escala de intervalos
+	iguales.
+	2.- Las k muestras son obtenidas de manera aleatoria e independientemente desde la/s poblacion/es de origen.
+	3.- Se puede suponer razonablemente que la/s poblacion/es de origen sigue/n una distribucion normal.
+	4.- Las k muestras tienen varianzas aproximadamente iguales (homocedasticidad).
+
++ Procedimiento ANOVA de una via para muestras independientes
+	- Variabilidad total
+	- Variabilidad entre grupos
+	- Variabilidad al interior de cada grupo
+	- El estadistico de prueba F
+	- Resultado del procedimiento ANOVA
+	- Resumen del procedimiento ANOVA de una via para muestras independientes
+
++ ANOVA de una via para muestras independientes en R
+	ezANOVA() realiza la prueba de homocedasticidad de Levene.
+	H0: Las varianzas de las k muestras son iguales
+	HA: al menos una de las muestras tiene varianza diferente a alguna de las demas
+
++ Analisis post-hoc
+	- Correcciones de Bonferroni y Holm
+	- Prueba HSD de Tukey
+	Es mas poderosa que los factores de correccion de Bonferroni y Holm.
+	- Prueba de comparacion de Scheffe
+	Al igual que la corrección de Bonferroni, este método también es muy conservado al momento de efectuar 
+	comparaciones entre pares. Tiene la ventaja de que permite hacer comparaciones adicionales.
+
+---> CAPITULO 10 <---
+>> ANOVA DE UNA VÍA PARA MUESTRAS CORRELACIONADAS <<
+
++ Condiciones para usar ANOVA de una via para muestras correlacionadas
+1.- La escala con la que se mide la variable dependiente tiene las propiedades de una escala de intervalos iguales.
+2.- Las mediciones son independientes al interior de cada grupo.
+3.- Se puede suponer razonablemente que la/s poblacion/es de origen sigue/n una distribucion normal.
+4.- La matriz de varianzas-covarianzas es esferica. Esta condicion establece que las varianzas entre los diferentes
+niveles de las medidas repetidas deben ser iguales.
+
++ Procedimiento ANOVA de una via para muestras correlacionadas
+	- Variabilidad total, entre grupos e intra-grupos
+	- Variabilidad entre sujetos
+	- El estadistico de prueba F
+	- Resultado del procedimiento ANOVA
+	- Resumen del procedimiento ANOVA de una vía para muestras correlacionadas
+
++ ANOVA de una via para muestras correlacionadas en R
+ezANOVA() realiza la prueba de esfericidad de Mauchly.
+Cuando se producen violaciones a la condicion de esferidad:
+	- Correccion de Greenhouse-Geisser (e < 0,75)
+	- Correccion de Huyn-Feldt (e > 0,75) 
+
++ Procedimientos post-hoc
+	- Correcciones de Bonferroni y Holm
+	- Prueba HSD de Tukey y de comparacion de Scheffe
+
+---> CAPITULO 11 <---
+>> INFERENCIA NO PARAMÉTRICA CON MEDIANAS <<
+
++ Pruebas para una o dos muestras
+	- Prueba de suma de rangos de Wilcoxon (t student muestras independientes).
+	Condiciones:
+	1.- Las observaciones de ambas muestras son independientes.
+	2.- La escala de medicion empleada deber ser a lo menos ordinal, de modo que tenga sentido hablar de
+	relaciones de orden.
+		- Prueba de suma de rangos de Wilcoxon para muestras grandes.
+		- Prueba de suma de rangos de Wilcoxon para muestras pequeñas.
+		- Prueba de suma de rangos de Wilcoxon en R.
+	- Prueba de rangos con signo de Wilcoxon (t student muestras pareadas).
+	Condiciones:
+	1.- Los pares de observaciones son independientes.
+	2.- La escala de medicion empleada para las observaciones es intrinsecamente continua.
+	3.- La escala de medicion empleada para ambas muestras debe ser a lo menos ordinal.
+
++ Pruebas para mas de dos muestras
+	- Prueba de Kruskal-Wallis (ANOVA muestras independientes).
+	Condiciones:
+	1.- La variable independiente debe tener a lo menos dos niveles (aunque , para dos nivele, se suele usar la
+	prueba de Wilcoxon).
+	2.- La escala de la variable dependiente debe ser, a lo menos, ordinal.
+	3.- Las observaciones son independientes entre si.
+		- Analisis post-hoc
+			- Correccion de Bonferroni
+			- Correccion de Holm
+	- Prueba de Friedman (ANOVA muestras correlacionadas)
+	Condiciones: 
+	1.- La variable independiente debe ser categorica y tener a lo menos tres niveles.
+	2.- La escala de la variable dependiente debe ser, a lo menos, ordinal.
+	3.- Los sujetos son una muestra aleatoria e independiente de la poblacion.
+		- Analisis post-hoc
+			- Correccion de Bonferroni
+			- Correccion de Holm
+---> CAPITULO 12 <---
+>> REMUESTREO <<
+Son una buena alternativa a emplear cuando necesitamos inferir sobre parametros distintos a la media o proporcion,
+o bien cuando no se cumplen las condiciones requeridas por las pruebas ya conocidas.
++ Bootstrapping
+	- Bootstrapping para una muestra
+	- Bootstrapping para dos muestras independientes
+	- Bootstrapping para dos muestras pareadas
+
++ Pruebas de permutaciones
+	- Prueba de permutaciones para comparar una variable continua en dos muestras independientes
+	- Prueba de permutaciones para comparar medias de más de dos muestras correlacionadas
+
+---> CAPITULO 13 <---
+>> OTRAS ALTERNATIVAS PARA DATOS PROBLEMÁTICOS <<
+
++ Transformacion de datos
+	- Transformación lineal
+	- Transformación logarítmica
+	- Escalera de potencias de Tukey
+	- Transformaciones Box-Cox
+
++ Metodos robustos
+	- Alternativas robustas para la media
+		- Media truncada
+		- Media Winsorizada
+	- Prueba de Yuen para dos muestras independientes
+	- Prueba de Yuen para dos muestras pareadas
+	- Comparaciones de una vía para múltiples grupos independientes
+	- Comparaciones de una vía para múltiples grupos correlacionados
+
+---> CAPITULO 13 <---
