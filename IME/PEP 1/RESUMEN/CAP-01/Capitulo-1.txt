@@ -1,0 +1,38 @@
+INFERENCIA Y MODELOS ESTADISTICOS
+QUE ES UN MODELO?
+	• Es una representación con propósito particular.
+	• Representación simplificada de la realidad en la que aparecen algunas de sus propiedades.
+	• Permiten estudiar de forma simple y comprensible una porción de la realidad.
+	• Dejan cosas fuera y pueden llevar a conclusiones equivocadas.
+	• Resumen de manera convincente, a juicio de sus creadores, los aspectos más relevantes del fenómeno estudiado y sus relaciones.
+	• Están mediados por el diseño, es decir la forma de seleccionar y observar (o manipular) la realidad modelada.
+	• Son pequeños, económicos, seguros y fáciles de transportar, copiar y modificar.
+
+MODELO ESTADISTICO
+	• Modelo matemático de la regularidad estadística de los posibles resultados de la evolución de un fenómeno aleatorio.
+	• Distribución de probabilidad construida para poder hacer inferencias o tomar decisiones desde datos.
+	• Descripción simple de un proceso probabilístico que puede hacer dado origen a un conjunto de datos observados.
+	• Modelo estocástico que contiene parámetros desconocidos  que deben ser estimados en base a suposiciones acerca del modelo y los datos.
+
+Un modelo estadístico sirve para:
+	• Describir o resumir datos.
+	• Clasificar o predecir.
+	• Anticipar el resultado de intervenciones.
+
+TIPOS DE VARIABLES
+	▪ Numéricas: Pueden tomar muchos valores numéricos, y son sensibles a operaciones aritméticas.
+		▫ Continuas: Pueden tomar cualquier valor (en un intervalo) del conjunto de los reales.
+		▫ Discretas: No es posible que tomen cualquier valor (en un intervalo).
+	▪ Categóricas: Solo pueden tomar un valor entre un conjunto acotado. Cada posible valor se denomina nivel/
+		▫ Nominales: No existe un orden natural entre los niveles.
+		▫ Ordinales: Existe un orden natural entre los niveles.
+
+La estadística usa los datos para responder diversas preguntas, muchas de las cuales se orientan a encontrar relaciones entre variables.
+	▪ Independientes: no existe asociación o relación entre las variables.
+	▪ Dependientes: existe una asociación o relación entre las variables.
+		▫ Asociación positiva: si una variable crece, la otra también lo hace.
+		▫ Asociación negativa: si una variable crece, la otra decrece.
+
+Un parámetro es cualquier número que describa una población en forma resumida. A su vez, un estadístico es cualquier cantidad cuyo valor puede ser calculado a partir de datos muestrales.
+
+El parámetro describe una población, mientras que el estadístico, al ser calculado a partir de una muestra, no es más que una estimación puntual del parámetro.
