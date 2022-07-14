@@ -1,0 +1,121 @@
+----> INFERENCIA CON MEDIAS MUESTRALES <----
+x- Prueba t de student
+La prueba t de Student, basada en la distribucion t, es la alternativa mas ampliamente empleada para inferir acerca
+de una o dos medias muestras. No opera bajo el supuesto de normalidad.
++- Las observaciones son independientes entre si.
++- Las observaciones provienen de una distribucion cercana a la normal.
+	1.- Prueba t para una muestra
+	2.- Prueba t para dos muestras pareadas
+	3.- Prueba t para dos muestras independientes
+		+- Cada muestra cumple las condiciones para usar la distribucion t.
+		+- Las muestras son independientes entre si.
+
+----> INFERENCIA CON PROPORCIONES MUESTRALES <----
+x- Metodo de Wald
+Permite construir intervalos de confianza y constratar hipotesis bajo el supuesto de normalidad para una propGod
+	1.- Metodo de Wald para una proporcion
+	2.- Metodo de Wald para dos proporciones
+
+x- Metodo de Wilson
+
+----> INFERENCIA NO PARAMETRICA CON PROPORCIONES <----
+x- Prueba chi-cuadrado de Pearson
+	1.- Prueba chi-cuadrado de homogeneidad
+	2.- Prueba chi-cuadrado de bondad de ajuste
+	3.- Prueba chi-cuadrado de independencia
+
+x- Pruebas para muestras pequeñas
+	1.- Prueba exacta de Fisher
+	2.- Prueba de mcNemar
+
+x- Prueba Q de Cochran
+
+----> ANOVA DE UNA VIA PARA MUESTRAS INDEPENDIENTES <----
+x- Condiciones
+
+x- Analisis Post-hoc
+	1.- Correcciones de Bonferroni y Holm
+	2.- Prueba HSD de Tukey
+	3.- Prueba de comparacion de Scheffe
+
+----> ANOVA DE UNA VIA PARA MUESTRAS CORRELACIONADAS <----
+x- Condiciones
+
+x- Analisis Post-hoc
+	1.- Correcciones de Bonferroni y Holm
+	2.- Prueba HSD de Tukey
+	3.- Prueba de comparacion de Scheffe
+
+----> INFERENCIA NO PARAMETRICA CON MEDIAS <----
+x- Pruebas para una o dos muestras
+	1.- Prueba de suma de rangos de Wilcoxon
+	2.- Prueba de rangos con signo de Wilcoxon
+
+x- Prueba para mas de dos muestras
+	1.- Prueba de Kruskal-Wallis
+	2.- Prueba de Friedman
+
+----> REMUESTREO <----
+x- Bootstrapping
+	1.- Bootstrapping para una muestra
+	2.- Bootstrapping para dos muestras independientes
+	3.- Bootstrapping para dos muestras pareadas
+
+x- Pruebas de permutaciones
+	1.- Prueba de permutaciones para comparar una variable continua en dos muestras independientes
+	2.- Prueba de permutaciones para comparar medias de mas de dos muestras correlacionadas
+
+----> OTRAS ALTERNATIVAS PARA DATOS PROBLEMATICOS <----
+x- Transformacion de dato
+	1.- Transformacion lineal
+	2.- Transformacion logaritmica
+	3.- Escalera de potencias de Tukey
+	4.- Transformaciones Box-Cox
+
+x- Metodos Robustos
+	1.- Alternativas robustas para la media
+	2.- Prueba de Yuen para dos muestras independientes
+	3.- Prueba de Yuen para dos muetras pareadas
+	4.- Comparaciones de una via para multiples grupos independientes
+	5.- Comparaciones de una via para multiples grupos correlacionados
+
+----> REGRESION LINEAL <----
+x- Evaluacion de un modelo RLS
+	1.- Influencia en los valores atipicos
+	2.- Bondad de ajuste
+	3.- Validacion cruzada
+	4.- Validad cruzada de k pliegues
+	5.- Validacion cruzada dejando uno fuera
+
+----> REGRESION LINEAL MULTIPLE <----
+x- Condiciones para usar RLM
+
+x- Comparacion de modelos
+
+x- Seleccion de predictores
+
+x- Evaluacion de un modelo RLM
+	1.- Identificacion de valores con sobreinfluencia
+		+- Residuo estandarizado
+		+- Valor predictivo ajustado
+		+- Residuo estudiantizado
+		+- Diferencia ne ajuste
+		+- Diferencia de betas
+		+- Distancia de Cook
+		+- Apalancamiento
+		+- Razon de covarianza
+	2.- Verificacion de las condiciones
+		+- Independencia de los residuos
+		+- Distribucion normal de los residuos
+		+- Homocedasticidad de los residuos
+		+- Multicolinealidad
+	3.- Validacion cruzada
+	4.- Tamaño de la muestra
+
+----> REGRESION LOGISTICA <----
+x- Condiciones para usar RL
+
+x- Seleccion de predictores
+
+x- Comparacion de modelos
+
